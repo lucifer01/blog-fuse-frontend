@@ -28,11 +28,10 @@ class signup extends Component {
     };
   }
 
-  static getDerivedStateFromProps(props, state) {
+  componentWillReceiveProps(props, state) {
     if (props.UI.errors) {
       this.setState({ errors: props.UI.errors });
     }
-    return state;
   }
   handleSubmit = (event) => {
     event.preventDefault();

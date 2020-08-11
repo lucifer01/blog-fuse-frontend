@@ -29,12 +29,11 @@ class login extends Component {
     };
   }
 
-  // static getDerivedStateFromProps(props, state) {
-  //   if (props.UI.errors) {
-  //     this.setState({ errors: props.UI.errors });
-  //   }
-  //   return state;
-  // }
+  componentWillReceiveProps(props, state) {
+    if (props.UI.errors) {
+      this.setState({ errors: props.UI.errors });
+    }
+  }
   handleSubmit = (event) => {
     event.preventDefault();
     const userData = {

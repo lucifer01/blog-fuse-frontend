@@ -36,7 +36,10 @@ class Search extends Component {
   };
 
   render() {
-    const searchClient = algoliasearch("ALGOLIA_APP_ID", "ALGOLIA_API_KEY");
+    const searchClient = algoliasearch(
+      "JBC1H3K4WE",
+      "9fa29b2f3c2d25db85446801fd385494"
+    );
 
     return (
       <InstantSearch indexName="post_search" searchClient={searchClient}>
